@@ -1,0 +1,113 @@
+.App {
+  text-align: left;
+  background-color: #f0e9eb;
+  
+}
+
+.App-header {
+  background-color: #5f446b;
+  height: 70px;
+  display: grid;
+  justify-content: center;
+  font-size: large;
+  color: rgba(26, 2, 22, 0.932);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App-header h2 {
+  margin: 0;
+}
+
+.errorMessage {
+  margin: auto;
+  font-weight: bold;
+  color: rgb(161, 15, 15);
+}
+
+.container {
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+ grid-template-rows: auto;
+ grid-column-gap: 20px;
+ grid-row-gap: 20px;
+ padding: 2px 16px;
+ text-align: left;
+ display: grid;
+ cursor: pointer;
+}
+
+.card{
+ box-shadow: 0 4px 8px 0 rgba(185, 183, 187, 0.781);
+ transition: 0.3s;
+ border-radius: 3px;
+ width: 160px;
+ padding: 5px;
+ text-overflow: ellipsis;
+ background-color: rgba(255, 255, 255, 0.781);
+}
+
+.data {
+  display:"block";
+}
+.detail{
+ transition: 0.3s;
+ border-radius: 10px;
+ padding: 20px;
+ padding-left: 150px;
+ display: grid;
+ grid-column-gap: 20px;
+ grid-row-gap: 20px;
+grid-template-columns: 200px 800px;
+align-items: start;
+justify-content: center;
+font-size: 18px;
+}
+.ketchup{
+  justify-content: center;
+  
+}
+.mayo{
+  justify-content: center;
+  padding-left: 170px;
+  width: 1200px;
+}
+.form {
+height: 582px;
+align-items: center;
+padding: 100px;
+border-spacing: 10px;
+
+}
+.editbox {
+  height: 580px;
+align-items: center;
+padding: 80px;
+border-spacing: 20px;
+ 
+}
+.full {
+  font-size: 20px;
+}
+.form-inline{
+font-size: 20px;
+}
+.loader{
+position: fixed;
+z-index: 99;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: aqua;
+justify-content: center;
+align-items: center;
+}
+
