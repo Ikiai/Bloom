@@ -39,7 +39,7 @@ onDelete(){
   .then((response) => response.json())
   .then((data) => {
     console.log('Success:', data);
-    this.props.history.push('/'); 
+    this.props.history.push("/"); 
   })
   .catch((error) => {
     console.error('Error:', error);
@@ -64,7 +64,7 @@ onDelete(){
             >Delete
          </button>
       </div>
-
+      <span>&nbsp;&nbsp;</span>
        <div className="detail">
         <img alt="" width="200" src={this.state.data.imageUrl}/>
           <div className="ketchup">
@@ -72,10 +72,13 @@ onDelete(){
                 <h3>{this.state.data.genre}</h3>
            </div>
          </div>
-      <div className = "mayo">
-           <iframe title = "Trailer" frameBorder="0" src={this.state.data.trailer}></iframe> 
-                 <div>{this.state.data.description}</div>
-      </div>   
+      <div className = "depth">
+      <iframe title = "Trailer" frameBorder="0" src={this.state.data.trailer} height = "250px" width= "350px"></iframe>
+      <span>&nbsp;&nbsp;</span> 
+               <div>{this.state.data.description}</div>  
+      </div>
+         
+       
       </div>
       )
     }

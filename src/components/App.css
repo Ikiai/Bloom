@@ -1,7 +1,7 @@
 .App {
   text-align: left;
   background-color: #f0e9eb;
-  
+  font-family:"Helvetica Neue", Helvetica, sans-serif;
 }
 
 .App-header {
@@ -10,7 +10,7 @@
   display: grid;
   justify-content: center;
   font-size: large;
-  color: rgba(26, 2, 22, 0.932);
+  color: rgb(255, 249, 254);
   padding: 20px;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
 
 .card{
- box-shadow: 0 4px 8px 0 rgba(185, 183, 187, 0.781);
+ box-shadow: 0 4px 8px 0 rgba(135, 134, 221, 0.781);
  transition: 0.3s;
  border-radius: 3px;
  width: 160px;
@@ -74,27 +74,39 @@ font-size: 18px;
   justify-content: center;
   
 }
-.mayo{
-  justify-content: center;
-  padding-left: 170px;
-  width: 1200px;
-}
-.form {
+.addform {
 height: 582px;
 align-items: center;
-padding: 100px;
+padding: 50px;
 border-spacing: 10px;
-
+height:100%;
+width: 100%;
 }
-.editbox {
-  height: 580px;
+.depth{
+  align-items: center;
+  padding: 20px;
+  padding-left: 175px;
+}
+.editform {
+font-family:"Helvetica Neue", Helvetica, sans-serif;
+height: 580px;
 align-items: center;
-padding: 80px;
-border-spacing: 20px;
- 
+padding: 50px;
+border-spacing: 30px;
+height: 100%;
+width: 100%;
+overflow: auto;
+resize: vertical;
 }
 .full {
   font-size: 20px;
+  box-shadow: 5px 15px 15px 5px rgba(186, 177, 196, 0.781);
+ transition: 0.3s;
+ border-radius: 3px;
+ width: 100%;
+ height:100% ;
+ align-items: center;
+ justify-items: center;
 }
 .form-inline{
 font-size: 20px;
@@ -109,5 +121,10 @@ height: 100%;
 background-color: aqua;
 justify-content: center;
 align-items: center;
+}
+.input, textarea  
+{  
+  font-family:"Helvetica Neue", Helvetica, sans-serif;
+   font-size: 18px;   
 }
 

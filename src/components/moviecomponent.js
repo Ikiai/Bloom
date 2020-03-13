@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {Add} from "@material-ui/icons";
 
+
  class MovieComponent extends Component{
     state = {
         loading: true,
@@ -26,7 +27,7 @@ import {Add} from "@material-ui/icons";
        render (){
         if (this.state.loading===true){
           return(
-            <div style ={{backgroundColor: "yellow"}}>Loading...</div>
+            <img src = {"./load.gif"} alt = ""/>
           )
         }
         else{

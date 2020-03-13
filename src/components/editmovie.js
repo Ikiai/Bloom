@@ -59,7 +59,8 @@ class EditMovie extends Component{
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
-        alert("Success!! Movie has been edited. Reload the previous page to see the changes");
+        this.props.history.push(`/details/${this.state._id}`);
+        alert("Success!! Movie has been edited.");
       })
 
        };
@@ -67,82 +68,104 @@ class EditMovie extends Component{
         
       render (){
         return (
-          <div className = "editbox">
-          <h1>Edit Movie Details</h1>
+          <div className = "editform">
+         <h2>Edit Movie Details</h2>
+         <span>&nbsp;&nbsp;</span>
       <form className="form-inline" onSubmit={this.onSubmit}>
+       <div>
+         <p>
+         <legend>Title</legend>
        <input
            type="text"
+           title="title"
            name="title"
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px",border: "none", overflow: "auto", borderRadius: "3px", resize:"vertical", fontSize:"15px"}}
            ref={input => this.title = input}
            value = {this.state.title}
            onChange = {this.handleInputChange.bind(this)}
         />
+         </p>
+       </div>
+    
        <div>
+         <p>
+       <legend>Release Date</legend>
        <input
            type="text"
            name="releaseDate"
            ref={input => this.date = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
            value = {this.state.releaseDate ||""}
            onChange = {this.handleInputChange.bind(this)}
-           /> 
+           /> </p>
        </div>
-      
+       
        <div>
+       <p>
+       <legend>Director</legend>
        <input
            type="text"
            name="director"
            ref={input => this.director = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
            value = {this.state.director}
            onChange = {this.handleInputChange.bind(this)}
-           /> 
+           /> </p>
        </div>
        <div>
-       <input
+       <p>
+       <legend>Description</legend>
+       <textarea
            type="text"
            name="description"
            ref={input => this.description = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"100%", height: "100px", border: "none", borderRadius: "3px", fontSize: "15px"}}
            value = {this.state.description}
            onChange = {this.handleInputChange.bind(this)}
-           /> 
+           /> </p>
        </div>
        <div>
+       <p>
+       <legend>Genre</legend>
        <input
            type="text"
            name="genre"
            ref={input => this.genre = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
            value = {this.state.genre}
            onChange = {this.handleInputChange.bind(this)}
            /> 
+       </p>
        </div>
        <div>
-       <input
+       <p>
+       <legend>Image Url</legend>
+       <textarea
            type="text"
            name="imageUrl"
            ref={input => this.imageUrl = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
            value = {this.state.imageUrl}
            onChange = {this.handleInputChange.bind(this)}
-           /> 
+           /> </p>
        </div>
        <div>
-       <input
+       <p>
+       <legend>Trailer Url</legend>
+       <textarea
            type="text"
            name="trailer"
            ref={input => this.trailer = input}
-           style = {{width:"70%", height: "50px"}}
+           style = {{width:"50%", height: "50px", border: "none",  borderRadius: "3px", resize:"none", fontSize:"15px"}}
            value = {this.state.trailer}
            onChange = {this.handleInputChange.bind(this)}
-           /> 
+           /> </p>
        </div>
          
       
        <button 
            type="submit" 
+           style ={{backgroundColor: "rgba(135, 134, 221, 0.877)", fontSize: "15px", width:"50px", height:"50px", border:"none"}}
           ><b>Save</b>
        </button>
       </form>
