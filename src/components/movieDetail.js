@@ -51,7 +51,6 @@ onDelete(){
   render (){
     return( 
       <div className="full" >
-
       <div style = {{float:"right"}}>
       <Link to={{
            pathname: `/details/${this.state.data._id}/edit`,

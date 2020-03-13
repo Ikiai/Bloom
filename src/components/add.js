@@ -39,6 +39,7 @@ class AddMovie extends Component{
       })
       .catch((error) => {
         console.error('Error:', error);
+        alert("Oops. An error occured. Try again");
       });
       this.setState({loading: false})   
       
