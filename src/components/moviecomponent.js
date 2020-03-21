@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {Add} from "@material-ui/icons";
 
+const lod = require("./load.gif");
 
  class MovieComponent extends Component{
     state = {
@@ -15,7 +16,7 @@ import {Add} from "@material-ui/icons";
         _id:"",
         imageUrl:"", 
       };
-
+      
       async componentDidMount(){
         const url = "https://movi-lib.herokuapp.com/api/v1/movies";
         const response = await fetch (url);
@@ -23,11 +24,12 @@ import {Add} from "@material-ui/icons";
         this.setState({data: movies.data, loading: false})
         console.log(movies.data);
       }
-      
+     
        render (){
         if (this.state.loading===true){
-          return(
-            <img src = {"./load.gif"} alt = ""/>
+          return(<div className="loader">
+            <img src = {lod} alt = "" style = {{ display:"block", marginLeft:"auto", marginRight:"auto", backgroundColor:"grey", width:"150px"}}/>
+            </div>
           )
         }
         else{
