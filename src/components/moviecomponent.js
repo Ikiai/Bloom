@@ -35,6 +35,7 @@ const lod = require("./load.gif");
         else{
           return (
             <div className = "container" >
+               <span>&nbsp;&nbsp;</span>
             {this.state.data.map(data =>(
                   <div key ={data._id} className= "card">
                     <Link to= {`/details/${data._id}`} style = {{textDecoration: "none"}}>
