@@ -34,7 +34,6 @@ const lod = require("./load.gif");
         }
         else{
           return (
-            
             <div className = "container" >
             {this.state.data.map(data =>(
                   <div key ={data._id} className= "card">
