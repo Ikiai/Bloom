@@ -47,15 +47,16 @@ onDelete(){
   
    };
 
-
   render (){
     return( 
+      <div className="movieCard">
       <div className="full" >
       <div style = {{float:"right"}}>
       <Link to={{
            pathname: `/details/${this.state.data._id}/edit`,
            state: {data: this.state.data}
-            }}><button  style = {{backgroundColor: "blue",
+            }}>
+            <button  style = {{backgroundColor: "blue",
             fontSize: "15px"}}>Edit</button></Link>
         <button onClick = {this.onDelete.bind(this)}
              type="submit" 
@@ -63,21 +64,17 @@ onDelete(){
             >Delete
          </button>
       </div>
-      <span>&nbsp;&nbsp;</span>
-       <div className="detail">
-        <img alt="" width="200" src={this.state.data.imageUrl}/>
-          <div className="ketchup">
-            <h1>{this.state.data.title}</h1>
-                <h3>{this.state.data.genre}</h3>
-           </div>
+      
+       <div>
+        <img alt="Pic Loading" width="200" src={this.state.data.imageUrl} style={{borderRadius: "3px"}}/>
+            <div style={{ width: "500px",height: "100px",float: "right"}}>
+              <h1>{this.state.data.title}</h1>
+            <h3>{this.state.data.genre}</h3></div>
+            <div style={{float: "left", marginTop: "30px"}}>
+      <iframe title = "Trailer" frameBorder="0" src={this.state.data.trailer} height = "250px" width= "400px"></iframe></div>
+               <div style={{float: "left", marginTop:"30px"}}>{this.state.data.description}</div>
          </div>
-      <div className = "depth">
-      <iframe title = "Trailer" frameBorder="0" src={this.state.data.trailer} height = "250px" width= "350px"></iframe>
-      <span>&nbsp;&nbsp;</span> 
-               <div>{this.state.data.description}</div>  
       </div>
-         
-       
       </div>
       )
     }
