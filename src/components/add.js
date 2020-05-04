@@ -49,69 +49,70 @@ class AddMovie extends Component{
           return (
             <div className = "addform">
         <form className="form-inline" onSubmit={this.onSubmit}>
-      <h1>Add Movie</h1>
-      <span>&nbsp;&nbsp;</span>
-      <div>
+      <h2>Add Movie</h2>
+      <div style = {{float: "left", fontSize: "15px"}}>
       <p>
-      <legend>Title</legend>
+      <legend><b>Title</b></legend>
          <input
              type="text"
-             style = {{width:"50%", height: "50px",border: "none", overflow: "auto", borderRadius: "3px", resize:"vertical", fontSize:"15px"}}
+             style = {{padding: "10px",width:"70%", height: "50px",border: "solid",borderWidth:"1px",borderColor: "grey", overflow: "auto", borderRadius: "3px", fontSize:"15px", resize: "vertical"}}
              ref={input => this.title = input}/></p>
        </div>
-         <div>
+         <div style = {{float: "right", fontSize: "15px"}}>
            <p>
-             <legend>Release Date(YYYY-MM-DD)</legend>
+             <legend><b>Release Date(YYYY-MM-DD)</b></legend>
          <input
-             type="text"
-             style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
+             type="date"
+             style = {{padding: "10px",width:"70%", height: "50px", border: "solid",borderWidth:"1px",borderColor: "grey", borderRadius: "3px", resize:"none", fontSize:"15px" }}
              ref={input => this.date = input}/> </p>
          </div>
         
-         <div>
+         <div style = {{float: "left", fontSize: "15px"}}>
            <p>
-             <legend>Director</legend>
+             <legend><b>Director</b></legend>
          <input
              type="text"
-             style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
+             style = {{padding: "10px",width:"70%", height: "50px", border: "solid",borderWidth:"1px",borderColor: "grey", borderRadius: "3px", resize:"none", fontSize:"15px"}}
              ref={input => this.director = input}/> </p>
          </div>
-         <div>
+         <div style = {{float: "right", fontSize: "15px", marginBottom: "20px"}}>
            <p>
-             <legend>Description</legend>
-         <textarea
-             type="text"
-             style = {{width:"100%", height: "100px", border: "none", borderRadius: "3px", fontSize: "15px"}}
-             ref={input => this.description = input}/> </p>
-         </div>
-         <div>
-           <p>
-             <legend>Genre</legend>
+             <legend><b>Genre</b></legend>
          <input
              type="text"
-             style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
+             style = {{padding: "10px",width:"70%", height: "50px", border: "solid",borderWidth:"1px",borderColor: "grey", borderRadius: "3px", resize:"none", fontSize:"15px"}}
              ref={input => this.genre = input}/> </p>
          </div>
-         <div>
+
+         <div style = {{clear: "both", fontSize: "15px"}}>
            <p>
-             <legend>Image Url</legend>
-         <input
-             type="text"
-             style = {{width:"50%", height: "50px", border: "none", borderRadius: "3px", resize:"none", fontSize:"15px"}}
-             ref={input => this.imageUrl = input}/> </p>
-         </div>
-         <div>
-           <p>
-             <legend>Trailer Url</legend>
+             <legend><b>Description</b></legend>
          <textarea
              type="text"
-             style = {{width:"50%", height: "50px", border: "none",  borderRadius: "3px", resize:"none", fontSize:"15px"}}
+             style = {{padding: "10px",width:"100%", height: "150px", border: "solid",borderWidth:"1px",borderColor: "grey", borderRadius: "3px", resize:"none",fontSize: "15px"}}
+             ref={input => this.description = input}/> </p>
+         </div>
+         
+         <div style = {{fontSize: "15px"}}>
+           <p>
+             <legend><b>Image Url</b></legend>
+         <input
+             type="text"
+             style = {{padding: "10px",width:"100%", height: "100px", border: "solid",borderWidth:"1px",borderColor: "grey", borderRadius: "3px", resize:"none", fontSize:"15px"}}
+             ref={input => this.imageUrl = input}/> </p>
+         </div>
+         <div style = {{fontSize: "15px"}}>
+           <p>
+             <legend><b>Trailer Url</b></legend>
+         <textarea
+             type="text"
+             style = {{padding: "10px",width:"100%", height: "50px", border: "solid",borderWidth:"1px",borderColor: "grey",  borderRadius: "3px", resize:"none", fontSize:"15px"}}
              ref={input => this.trailer = input}/> </p>
          </div>
            
          <button 
              type="submit"
-             style ={{backgroundColor: "rgba(135, 134, 221, 0.877)", fontSize: "15px", width:"50px", height:"50px", border:"none"}}
+             style ={{padding: "10px",backgroundColor: "#a86dc4", fontSize: "15px", width:"100%", height:"50px", border:"solid", borderWidth: "1px",borderRadius: "3px", borderColor: "grey"}}
             ><b>Save</b>
          </button>
         </form>

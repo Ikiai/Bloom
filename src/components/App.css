@@ -61,36 +61,36 @@
   display: "block";
 }
 .addform {
-  height: 582px;
-  align-items: center;
-  padding: 50px;
-  border-spacing: 10px;
-  height: 100%;
-  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 30%;
+  padding-top: 0%;
+  clear: both;
+  font-size: "15px";
+  
 }
 .editform {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  height: 580px;
-  align-items: center;
-  padding: 50px;
-  border-spacing: 30px;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  resize: vertical;
+  padding: 30%;
+  padding-top: 0%;
+  clear: both;
+  font-size: "15px";
+  
+  /* border-spacing: 30px; */
+  /* overflow: auto; */
+  /* resize: vertical; */
 }
 .full {
   font-size: 20px;
-  padding: 50px;
-  height: 1200px;
+  padding: 0px;
+  height: 1000px;
   width: 1100px;
   background-color: white;
   box-shadow: 0 0 10px gray;
   border-radius: 3px;
 }
 .movieCard{
-  padding:100px;
-  height: 2000px;
+  padding:5%;
+  height: 1100px;
   width:1000px;
 }
 
@@ -108,7 +108,19 @@
 textarea {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
+  margin-bottom: 20px;
+  
 }
+input:focus, textarea:focus{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+       border-radius: 4px;
+
+-webkit-box-shadow: 0px 0px 4px #a711ec;
+  -moz-box-shadow: 0px 0px 4px #a711ec;
+       box-shadow: 0px 0px 4px #a711ec;
+}
+
 .navbar{
   float: right;
 }

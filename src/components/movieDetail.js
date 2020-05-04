@@ -66,14 +66,14 @@ onDelete(){
       </div>
       
        <div>
-        <img alt="Pic Loading" width="200" src={this.state.data.imageUrl} style={{borderRadius: "3px"}}/>
-            <div style={{ width: "500px",height: "100px",float: "right"}}>
-              <h1>{this.state.data.title}</h1>
-            <h3>{this.state.data.genre}</h3></div>
-            <div style={{float: "left", marginTop: "30px"}}>
+        <img alt="" width="200" src={this.state.data.imageUrl} style={{borderRadius: "3px",float: "left", paddingLeft: "0px"}}/>
+            <div style={{ width: "600px",height: "200px",float:"left", paddingLeft: "50px"}}>
+              <p style = {{fontSize: "30px"}}>{this.state.data.title}</p>
+            <p style = {{color: "red"}}>{this.state.data.genre}</p></div>
+               <div style={{float: "left", padding: "50px"}}>{this.state.data.description}</div>
+               <div style={{float: "left", padding: "50px"}}>
       <iframe title = "Trailer" frameBorder="0" src={this.state.data.trailer} height = "250px" width= "400px"></iframe></div>
-               <div style={{float: "left", marginTop:"30px"}}>{this.state.data.description}</div>
-         </div>
+      </div>
       </div>
       </div>
       )
